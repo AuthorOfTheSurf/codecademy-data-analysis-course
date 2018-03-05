@@ -112,6 +112,13 @@ plt.legend(payment_method_names)
 plt.axis('equal')
 ```
 
+# Format Strings
+```py
+# Format string specify how numeric values should be displayed as text
+ROUNDED_TO_NEAREST_INTEGER = "%d%%" # 10%
+TWO_SIG_FIGS = "%0.2f%%"            # 2.36%
+```
+
 # Histograms
 ```py
 # Create a histogram with `plt.hist(...)`, specify the number of bins with the
