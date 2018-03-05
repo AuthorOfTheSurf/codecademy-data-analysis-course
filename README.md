@@ -103,3 +103,19 @@ plt.hist(sales_times, bins=20)
 plt.hist(sales_times1, bins=20, alpha=0.4, normed=True)
 plt.hist(sales_times2, bins=20, alpha=0.4, normed=True)
 ```
+
+# List Comprehensions
+```py
+# List comprehensions can be used to transform one list into another without error
+# by defining how the output list should look
+temperatures = [-5, 29, 26, -7, 1, 18, 12, 31]
+temperatures_adjusted = [temp + 20 for temp in temperatures]
+
+# `zip` can be used to create a list of tuples, this list
+zip([1, 2, 3], [4, 6, 8])
+# yields [(1, 4), (2, 6), (3, 8)]... `(1, 4)` is a tuple with first value `1` and second value `2`
+
+# Here is a simple example of adding similar-indexed values in two lists
+[a + b for a,b in zip([1, 2, 3], [4, 6, 8])]
+# yields [5, 8, 11]
+```
