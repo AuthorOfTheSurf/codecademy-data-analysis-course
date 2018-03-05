@@ -1,6 +1,8 @@
 ## Python Cheatsheet
 ### For the Codecademy 10-week Data Analysis Course
 
+Here is the [matplotlib cheat-sheet](https://s3.amazonaws.com/codecademy-content/courses/matplotlib/data_vis_matplotlib_cheatsheet_v1_revisons.pdf) provided by the course
+
 # Figure (area where one or more charts are plotted)
 ```py
 # Define the "figure") by using the `figsize` parameter and giving it a tuple
