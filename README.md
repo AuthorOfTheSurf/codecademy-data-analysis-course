@@ -20,7 +20,7 @@ ax.set_xticks(tick_indexes)
 ax.set_xticklabels(drinks, rotation=-30)
 
 # Side-by-side Barcharts
-# It turns out that the x values in a barchart are used to state *where* to
+# It turns out that the x values in a bar chart are used to state *where* to
 # place the bars. This fact allows us to plot two sets of data next to each
 # other by shifting one set, and maintaining nice spacing
 #Paste the x_values code here
@@ -37,7 +37,7 @@ store2_x = [t*element + w*n for element
 plt.bar(store1_x, sales1)
 plt.bar(store2_x, sales2)
 
-# You can plot a stacked barchart by plotting the first set of data (bottom-most)
+# You can plot a stacked bar chart by plotting the first set of data (bottom-most)
 # then plotting a second set of data and specifying the first set with the
 # `bottom` parameter
 plt.bar(x_values, sales1,
@@ -45,17 +45,20 @@ plt.bar(x_values, sales1,
 plt.bar(x_values, sales2,
         bottom=sales1,
         label="Location 2")
-# The easiest way to add a legend to a barchart is by using the `label` parameter,
+# The easiest way to add a legend to a bar chart is by using the `label` parameter,
 # then calling plt.legend()
 plt.legend()
 
-# Add error bars to your barchart using the `yerr` parameter to specify a same-length
+# Add error bars to your bar chart using the `yerr` parameter to specify a same-length
 # list of error values, and the `captize` parameter to draw horizontal lines at the
 # terminal ends of the error bars
 plt.bar(range(len(ounces_of_milk)), ounces_of_milk,
         yerr=error,
         capsize=5)
-        
+```
+
+# Line Charts
+```py
 # List comprehensions can be used to creates lists that are based on lists
 # The first part of a list comprehension is what you want the values to look like,
 # the second part is where you refer to original list
@@ -66,7 +69,10 @@ y_upper = [i + 0.1 * i for i in revenue]
 # to plot the area of uncertainty in addition to the data line
 plt.plot(months, revenue)
 plt.fill_between(months, y_lower, y_upper, alpha=0.2)
+```
 
+# Pie Charts
+```py
 # Creating a pie chart is simple as pie!
 # This is frequently paired with `plt.axis('equal')` to produce a perfect circle
 plt.pie(payment_method_freqs)
@@ -81,7 +87,10 @@ plt.pie(payment_method_freqs,
 # `plt.legend(...)` is used to display a legend on a pie chart
 plt.legend(payment_method_names)
 plt.axis('equal')
+```
 
+# Histograms
+```py
 # Create a histogram with `plt.hist(...)`, specify the number of bins with the
 # `bins` parameter
 plt.hist(sales_times, bins=20)
