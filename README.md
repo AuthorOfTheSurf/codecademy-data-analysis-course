@@ -82,5 +82,15 @@ plt.pie(payment_method_freqs,
 plt.legend(payment_method_names)
 plt.axis('equal')
 
+# Create a histogram with `plt.hist(...)`, specify the number of bins with the
+# `bins` parameter
+plt.hist(sales_times, bins=20)
 
+# You can plot multiple histograms on top of one another by calling `plt.hist`
+# again. The `alpha` parameter can be used to adjust transparency to make
+# comparison easier. If the two data sets have differing amounts of value, the
+# `normed` parameter can be used to normalize the data and better-compare how
+# the data sets are distributed
+plt.hist(sales_times1, bins=20, alpha=0.4, normed=True)
+plt.hist(sales_times2, bins=20, alpha=0.4, normed=True)
 ```
