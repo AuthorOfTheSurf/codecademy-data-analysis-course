@@ -1,5 +1,5 @@
 ## Python Cheatsheet
-### For the Codecadement 10-week Data Analysis Course
+### For the Codecademy 10-week Data Analysis Course
 
 # Figure (area where one or more charts are plotted)
 ```py
