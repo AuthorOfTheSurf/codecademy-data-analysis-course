@@ -1,8 +1,39 @@
 ## Python Cheatsheet
 ### For the Codecadement 10-week Data Analysis Course
 
-# Bar Charts
+# Figure (area where one or more charts are plotted)
+```py
+# Define the "figure") by using the `figsize` parameter and giving it a tuple
+# with width and height: `plt.figure(figsize=(x_width_inches, y_width_inches))
+plt.figure(figsize=(10,8))
+```
 
+# Axes Object
+```py
+# You can get a reference to the Axis object via calling plt.subplot()
+# This is a little unintuitive if you are only plotting one barchart
+ax = plt.subplot()
+
+# We have seen the axis object mainly used for its `set_` methods so far
+# when creating a bar chart
+ax.set_xticks(tick_indexes)
+ax.set_xticklabels(drinks, rotation=-30)
+```
+
+# Chart title & labelling Axes
+```py
+plt.title('Final Exam Averages')
+plt.ylabel('Test average')
+plt.xlabel('Year')
+```
+
+# Saving a created figure 
+```py
+# This will destroy a file with the same name if one exists!!!
+plt.savefig('my_bar_chart.png')
+```
+
+# Bar Charts
 ```py
 # Plots y vs. x in a Bar Chart
 plt.bar(x, y)
@@ -10,14 +41,6 @@ plt.bar(x, y)
 # range(len(sales)) is a nice trick to get x values to plot vs. your y values
 sales =  [91, 76, 56, 66, 52, 27]
 plt.bar(range(len(sales)), sales)
-
-# You can get a reference to the Axis object via calling plt.subplot()
-# This is a little unintuitive if you are only plotting one barchart
-ax = plt.subplot()
-
-# We have seen the axis object mainly used for its `set_` methods so far
-ax.set_xticks(tick_indexes)
-ax.set_xticklabels(drinks, rotation=-30)
 
 # Side-by-side Barcharts
 # It turns out that the x values in a bar chart are used to state *where* to
